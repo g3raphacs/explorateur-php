@@ -51,28 +51,29 @@
         <div id="files">
             <!-- afficher les fichiers ici  -->
             <div class="fileblock">
-                <a href="#">
-                    <div><span class="icon fas fa-folder"></span></div>
-                    <p>nom_de_fichier.txt</p>
-                </a>
+                <div><span class="icon fas fa-folder"></span></div>
+                <p>nom de dossier</p>
+                <span class="check far fa-check-square"></span>
             </div>
             <div class="fileblock">
-                <a href="#">
-                    <div><span class="icon fas fa-folder"></span></div>
-                    <p>nom_de_fichier.txt</p>
-                </a>
+                <div><span class="icon fas fa-folder"></span></div>
+                <p>nom_de_dossier</p>
+                <span class="check far fa-check-square"></span>
             </div>
             <div class="fileblock">
-                <a href="#">
-                    <div><span class="icon fas fa-folder"></span></div>
-                    <p>nom_de_fichier.txt</p>
-                </a>
+                <div><span class="icon fas fa-file-alt"></span></div>
+                <p>nom_de_fichier.txt</p>
+                <span class="check far fa-check-square"></span>
             </div>
             <div class="fileblock">
-                <a href="#">
-                    <div><span class="icon fas fa-file-alt"></span></div>
-                    <p>nom_de_fichier.txt</p>
-                </a>
+                <div><span class="icon fas fa-file-alt"></span></div>
+                <p>nom_de_fichier.txt</p>
+                <span class="check far fa-square"></span>
+            </div>
+            <div class="fileblock">
+                <div><span class="icon fas fa-file-alt"></span></div>
+                <p>nom_de_fichier.txt</p>
+                <span class="check far fa-square"></span>
             </div>
 
 
@@ -94,7 +95,7 @@
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restaurer</p></div>
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Mise à jour</p></div>
             </div>
-            
+
 
 
 

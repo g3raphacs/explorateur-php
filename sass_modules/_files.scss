@@ -5,7 +5,10 @@
     background-color: rgb(19, 19, 19);
     padding: 5px;
     .fileblock{
-        display: block;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         background-color: rgb(51, 50, 61);
         color: white;
         text-align: center;
@@ -13,12 +16,9 @@
         margin: 5px;
         width: 100px;
         height: 100px;
-        a{
-            color: white;
-
-        }
+        border-radius: 3px;
         .icon{
-            font-size: 3rem;
+            font-size: 2.7rem;
         }
         p{
             width: 100%;
@@ -27,6 +27,13 @@
             overflow: hidden;
             word-wrap: break-word;
             line-height: 0.8rem;
+        }
+        .check{
+            position: absolute;
+            font-size: 1.5rem;
+            top:3px;
+            right:3px;
+
         }
     }
 }
