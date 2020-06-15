@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container" class="container">
+    <div class="container">
         <div id="top">
             <dix id="topBar">
                 <!-- logo et liste de tri ici  -->
@@ -76,19 +76,19 @@
 
         <div id="actionsBar">
             <!-- boutons d'action ici  -->
-            <div>
-                <button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button><p>Modifier</p> 
-                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Couper</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copier</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Coller</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Supprimer</p>
+            <div class="flex between">
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button><p>Modifier</p></div> 
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Couper</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copier</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Coller</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Supprimer</p></div>
             </div>
-            <div>
-                <button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Corbeille</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restaurer</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Mise à jour</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Modifier</p>
-                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Modifier</p>
+            <div class="flex between">
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye"></span></button><p>Afficher</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye-slash"></span></button><p>Masquer</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Corbeille</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restaurer</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Mise à jour</p></div>
             </div>
             
 

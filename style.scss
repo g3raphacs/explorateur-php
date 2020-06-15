@@ -1,2 +1,16 @@
 @import 'sass_modules/_files.scss';
 
+#actionsBar{
+    display:flex;flex-wrap:wrap;justify-content:space-between;font-size: 0.65rem;
+
+    .flex{display:flex;}
+    .column{flex-direction: column;}
+    
+    .between{justify-content:space-around;width: 20rem;}
+    .btn{color:#33323d;border-radius: 20px;width:40px; height: 40px;border:2px solid;margin-top: 1rem;padding-left:10px;
+        
+    }
+    
+
+}
+
