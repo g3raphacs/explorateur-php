@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Explorer</title>
+    <link rel="icon" type="img/png" href="img/favicon-explorer.png"/>
     <!-- lien Bootstrap CDN  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- lien style.css -->
@@ -16,20 +17,11 @@
                 <!-- logo et liste de tri ici  -->
                 <header>
                     <h1>Explorateur de fichiers</h1>
-                    <p><a href="#"><span class="fas fa-arrow-circle-left"></span></a></p>
+                    <p><a href="#"><span class="fas fa-arrow-circle-left btn"></span></a></p>
                 </header>
-                <div class="btn-group">
-                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    trier par
-                    <span class="fas fa-sort"></span>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">nom</a>
-                        <a class="dropdown-item" href="#">taille</a>
-                        <a class="dropdown-item" href="#">type</a>
-                        <a class="dropdown-item" href="#">date de création</a>
-                    </div>
-            </div>
+                
+                
+
             <div id="navigation">
                 <!-- fil d'ariane ici  -->
                 <nav aria-label="breadcrumb">
@@ -40,6 +32,18 @@
                         <li class="breadcrumb-item active" aria-current="page">Nouveau dossier</li>
                     </ol>
                 </nav>
+                <div class="btn-group">
+                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        trier par
+                        <span class="fas fa-sort"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">nom</a>
+                        <a class="dropdown-item" href="#">taille</a>
+                        <a class="dropdown-item" href="#">type</a>
+                        <a class="dropdown-item" href="#">date de création</a>
+                    </div>
+                </div>
 
             </div>
         </div>
