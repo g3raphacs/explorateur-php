@@ -16,11 +16,12 @@
                 <!-- logo et liste de tri ici  -->
                 <header>
                     <h1>Explorateur de fichiers</h1>
-                    <p><a href="#"></a> icone retour</p>
+                    <p><a href="#"><span class="fas fa-arrow-circle-left"></span></a></p>
                 </header>
                 <div class="btn-group">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Trier par
+                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    trier par
+                    <span class="fas fa-sort"></span>
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">nom</a>
@@ -33,6 +34,7 @@
                 <!-- fil d'ariane ici  -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a><span class="fas fa-home"></span></a></li>
                         <li class="breadcrumb-item"><a href="#">Accueil</a></li>
                         <li class="breadcrumb-item"><a href="#">Travail</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Nouveau dossier</li>
@@ -75,6 +77,26 @@
 
         <div id="actionsBar">
             <!-- boutons d'action ici  -->
+            <div>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button><p>Modifier</p> 
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Couper</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copier</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Coller</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Supprimer</p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Corbeille</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restaurer</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Mise à jour</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Modifier</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Modifier</p>
+            </div>
+            
+
+
+
+
+
 
         </div>
 
