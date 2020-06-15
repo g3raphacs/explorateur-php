@@ -48,7 +48,7 @@
             <!-- afficher les fichiers ici  -->
             <div class="fileblock">
                 <div><span class="icon fas fa-folder"></span></div>
-                <p>nom_de_dossier</p>
+                <p>nom de dossier</p>
                 <span class="check far fa-check-square"></span>
             </div>
             <div class="fileblock">
@@ -91,7 +91,7 @@
                 <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Modifier</p>
                 <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Modifier</p>
             </div>
-            
+
 
 
 
