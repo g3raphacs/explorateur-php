@@ -6,9 +6,11 @@
     <title>File Explorer</title>
     <!-- lien Bootstrap CDN  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- lien style.css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="container">
         <div id="top">
             <dix id="topBar">
                 <!-- logo et liste de tri ici  -->
@@ -44,6 +46,31 @@
 
         <div id="files">
             <!-- afficher les fichiers ici  -->
+            <div class="fileblock">
+                <a href="#">
+                    <div><span class="icon fas fa-folder"></span></div>
+                    <p>nom_de_fichier.txt</p>
+                </a>
+            </div>
+            <div class="fileblock">
+                <a href="#">
+                    <div><span class="icon fas fa-folder"></span></div>
+                    <p>nom_de_fichier.txt</p>
+                </a>
+            </div>
+            <div class="fileblock">
+                <a href="#">
+                    <div><span class="icon fas fa-folder"></span></div>
+                    <p>nom_de_fichier.txt</p>
+                </a>
+            </div>
+            <div class="fileblock">
+                <a href="#">
+                    <div><span class="icon fas fa-file-alt"></span></div>
+                    <p>nom_de_fichier.txt</p>
+                </a>
+            </div>
+
 
         </div>
 
