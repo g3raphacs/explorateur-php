@@ -1,0 +1,32 @@
+#files{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(19, 19, 19);
+    padding: 5px;
+    .fileblock{
+        display: block;
+        background-color: rgb(51, 50, 61);
+        color: white;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+        width: 100px;
+        height: 100px;
+        a{
+            color: white;
+
+        }
+        .icon{
+            font-size: 3rem;
+        }
+        p{
+            width: 100%;
+            font-size: 0.9rem;
+            margin: 0;
+            overflow: hidden;
+            word-wrap: break-word;
+            line-height: 0.8rem;
+        }
+    }
+}
