@@ -49,10 +49,23 @@
 
         <div id="actionsBar">
             <!-- boutons d'action ici  -->
-            <button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button>
-            <button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button>
-            <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button>
-            <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button>
+            <div>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button><p>Modifier</p> 
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Couper</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copier</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Coller</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Supprimer</p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Corbeille</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restaurer</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Mise à jour</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Modifier</p>
+                <button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Modifier</p>
+            </div>
+            
+
+
 
 
 
