@@ -12,12 +12,32 @@
         <div id="top">
             <dix id="topBar">
                 <!-- logo et liste de tri ici  -->
-
-            </dix>
-            <dix id="navigation">
+                <header>
+                    <h1>Explorateur de fichiers</h1>
+                    <p><a href="#"></a> icone retour</p>
+                </header>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trier par
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">nom</a>
+                        <a class="dropdown-item" href="#">taille</a>
+                        <a class="dropdown-item" href="#">type</a>
+                        <a class="dropdown-item" href="#">date de création</a>
+                    </div>
+            </div>
+            <div id="navigation">
                 <!-- fil d'ariane ici  -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="#">Travail</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Nouveau dossier</li>
+                    </ol>
+                </nav>
 
-            </dix>
+            </div>
         </div>
 
         <div id="files">
