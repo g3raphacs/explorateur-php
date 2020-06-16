@@ -1,4 +1,7 @@
 <?php
+    //afficher les erreurs
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
     //Definit l'origine du site
     $www='.';
 
@@ -10,9 +13,18 @@
         mkdir('home');
     }
 
-    $url = $origin;
+    $sort='name';
 
-    //Scan les fichiers et le ajoute au tableau content
+    if(isset($_POST)){
+        $newPath= str_replace('"', '',$_POST['path']);
+        $sort= $_POST['sort'];
+        $url=$origin.$newPath;
+        echo $url;
+    }else{
+        $url=$origin;
+    }
+
+    //Scan les fichiers et les ajoute au tableau content
     $content=scandir($url);
 
     //Scan les fichiers et le ajoute au tableau content
