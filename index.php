@@ -107,6 +107,8 @@
 
 
 
+    <!-- script Ajax______________________________________________________________________ -->
+    <script src="scripts/ajax.js"></script>
     <!-- script Font Awesome______________________________________________________________________ -->
     <script src="https://kit.fontawesome.com/d5dcbc8efb.js" crossorigin="anonymous"></script>
     <!-- scripts necessaires à bootstrap  -->
