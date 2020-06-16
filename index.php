@@ -7,6 +7,8 @@
     <link rel="icon" type="img/png" href="img/favicon-explorer.png"/>
     <!-- lien Bootstrap CDN  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- lien font -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet">
     <!-- lien style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,8 +18,8 @@
             <dix id="topBar">
                 <!-- logo et liste de tri ici  -->
                 <header>
-                    <h1>Explorateur de fichiers</h1>
-                    <p><a href="#"><span class="fas fa-arrow-circle-left btn"></span></a></p>
+                    <h1>File explorer</h1>
+                    <p><a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a></p>
                 </header>
                 
                 
@@ -27,9 +29,9 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a><span class="fas fa-home"></span></a></li>
-                        <li class="breadcrumb-item"><a href="#">Accueil</a></li>
-                        <li class="breadcrumb-item"><a href="#">Travail</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Nouveau dossier</li>
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Work</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">New folder</li>
                     </ol>
                 </nav>
                 <div class="btn-group">
@@ -38,10 +40,10 @@
                         <span class="fas fa-sort"></span>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">nom</a>
-                        <a class="dropdown-item" href="#">taille</a>
+                        <a class="dropdown-item" href="#">name</a>
+                        <a class="dropdown-item" href="#">size</a>
                         <a class="dropdown-item" href="#">type</a>
-                        <a class="dropdown-item" href="#">date de création</a>
+                        <a class="dropdown-item" href="#">creation date</a>
                     </div>
                 </div>
 
@@ -82,26 +84,19 @@
         <div id="actionsBar">
             <!-- boutons d'action ici  -->
             <div class="flex between">
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button><p>Modifier</p></div> 
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Couper</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copier</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Coller</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Supprimer</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-edit"></span></button><p>Edit</p></div> 
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Cut</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copy</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Paste</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Delete</p></div>
             </div>
             <div class="flex between">
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye"></span></button><p>Afficher</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye-slash"></span></button><p>Masquer</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Corbeille</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restaurer</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Mise à jour</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye"></span></button><p>Eyes</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye-slash"></span></button><p>Hide</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Trash</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restore</p></div>
+                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Upload</p></div>
             </div>
-
-
-
-
-
-
-
         </div>
 
     </div>
