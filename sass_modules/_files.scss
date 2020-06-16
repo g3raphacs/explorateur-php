@@ -17,6 +17,7 @@
         width: 100px;
         height: 100px;
         border-radius: 3px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.342);
         .icon{
             font-size: 2.7rem;
         }
@@ -24,7 +25,7 @@
             width: 100%;
             font-size: 0.9rem;
             margin: 0;
-            overflow: hidden;
+            // overflow: hidden;
             word-wrap: break-word;
             line-height: 0.8rem;
         }
@@ -35,5 +36,65 @@
             right:3px;
 
         }
+    }
+    .fileblock:before {
+        content: "\f15b";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-:before {
+        content: "\f07b";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-tar:before,.type-zip:before,.type-rar:before,.type-iso:before,.type-7z:before{
+        content: "\f1c6";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-bmp:before,.type-jpg:before,.type-png:before,.type-jpeg:before,.type-gif:before,.type-tiff:before,.type-eps:before,.type-psd:before,.type-ai:before{
+        content: "\f1c5";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-txt:before,.type-rtf:before,.type-text:before{
+        content: "\f15c";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-mp3:before,.type-wav:before,.type-ogg:before,.type-wma:before,.type-flac:before,.type-aiff:before{
+        content: "\f1c7";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-js:before,.type-html:before,.type-css:before,.type-scss:before,.type-php:before{
+        content: "\f1c9";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-mp4:before,.type-avi:before,.type-mov:before,.type-wmv:before,.type-webm:before{
+        content: "\f1c8";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-xml:before,.type-xls:before{
+        content: "\f1c3";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-doc:before,.type-docx:before{
+        content: "\f1c2";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-pdf:before{
+        content: "\f1c1";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
+    }
+    .type-pptx:before{
+        content: "\f1c4";
+        font-family: "FontAwesome";
+        font-size: 2.3rem;
     }
 }

@@ -48,7 +48,7 @@
         <div id="files">
             <!-- afficher les fichiers ici  -->
             <div class="fileblock">
-                <div><span class="icon fas fa-folder"></span></div>
+                <span class="icon fas fa-folder"></span>
                 <p>nom de dossier</p>
                 <span class="filecheck far fa-check-square"></span>
             </div>

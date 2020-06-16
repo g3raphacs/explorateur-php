@@ -2,6 +2,10 @@ let aria = document.getElementById('aria');
 // Liste les objets Aria
 let ariaObjects =[];
 
+let filesWindow = document.getElementById('files');
+// Liste les objets Fichiers
+let fileObjects =[];
+
 
 // crée les variables par defaut à envoyer
 let path='dossier 1/dossier 1-1/';
@@ -35,9 +39,10 @@ function loadElements(){
     //Envoi de la requète à php
     fetch( 'check-directory.php', { method : "post" , body : formData } )
         .then( res => res.json() ).then( data =>{
-            //(temporaire) affiche la reponse reçue dans la console
+            //ARIA____________________________________________________
+            //supprime le contenu du fil d'ariane
             aria.innerHTML="";
-
+            //efface les objets aria
             ariaObjects.length=0;
 
             for (let i = 0; i < data.path.length; i++) {
@@ -62,7 +67,22 @@ function loadElements(){
                 aria.appendChild(pathItem);
             }
 
-            console.log(ariaObjects);
+            //FICHIERS____________________________________________________
+            //supprime le contenu de la fenetre
+            filesWindow.innerHTML="";
+            //efface les objets fichiers
+            fileObjects.length=0;
+
+            for (let i = 0; i < data.elements.length; i++) {
+                fileObjects.push(data.elements[i]);
+                let elementName=fileObjects[i].name;
+                let elementItem = document.createElement("div");
+                elementItem.innerHTML="<p>"+elementName+"</p>";
+                elementItem.classList.add("type-"+fileObjects[i].type);
+                elementItem.classList.add("fileblock");
+
+                filesWindow.appendChild(elementItem);
+            }
 
             //ICI Modification du code html en fonction de la réponse
         });

@@ -19,6 +19,7 @@
   width: 100px;
   height: 100px;
   border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.342);
 }
 #files .fileblock .icon {
   font-size: 2.7rem;
@@ -27,7 +28,6 @@
   width: 100%;
   font-size: 0.9rem;
   margin: 0;
-  overflow: hidden;
   word-wrap: break-word;
   line-height: 0.8rem;
 }
@@ -36,6 +36,66 @@
   font-size: 1.5rem;
   top: 3px;
   right: 3px;
+}
+#files .fileblock:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-tar:before, #files .type-zip:before, #files .type-rar:before, #files .type-iso:before, #files .type-7z:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-bmp:before, #files .type-jpg:before, #files .type-png:before, #files .type-jpeg:before, #files .type-gif:before, #files .type-tiff:before, #files .type-eps:before, #files .type-psd:before, #files .type-ai:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-txt:before, #files .type-rtf:before, #files .type-text:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-mp3:before, #files .type-wav:before, #files .type-ogg:before, #files .type-wma:before, #files .type-flac:before, #files .type-aiff:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-js:before, #files .type-html:before, #files .type-css:before, #files .type-scss:before, #files .type-php:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-mp4:before, #files .type-avi:before, #files .type-mov:before, #files .type-wmv:before, #files .type-webm:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-xml:before, #files .type-xls:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-doc:before, #files .type-docx:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-pdf:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
+}
+#files .type-pptx:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 2.3rem;
 }
 
 :root {
