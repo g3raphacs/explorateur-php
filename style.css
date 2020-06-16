@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #files {
   display: flex;
   flex-wrap: wrap;
@@ -85,12 +86,20 @@
   color: var(--color-three);
   font-weight: 500;
 }
-#navigation a {
+#navigation li {
+  font-family: var(--font-principal);
+  font-weight: 400;
   color: var(--color-text);
+  cursor: pointer;
 }
-#navigation a:hover, #navigation span:hover {
+#navigation li:hover, #navigation span:hover {
   color: var(--color-three);
   text-decoration: none;
+}
+#navigation .isHome:before {
+  content: "";
+  margin-right: 7px;
+  font-family: "FontAwesome";
 }
 
 #actionsBar {

@@ -36,12 +36,21 @@
         color: var(--color-three);
         font-weight: 500;
     }
-    a{
+
+    li{
+        font-family: var(--font-principal);
+        font-weight: 400;
         color: var(--color-text);
+        cursor: pointer;
     }
-    a:hover, span:hover{
+    li:hover, span:hover{
         color: var(--color-three);
         text-decoration: none;
+    }
+    .isHome:before {
+        content: "\f015";
+        margin-right: 7px;
+        font-family: "FontAwesome";
     }
 }
 
@@ -81,6 +90,7 @@
     .btn-outline-secondary:hover {
         background-color: var(--color-three);
         color: var(--color-text);}
+
 }
 
 

@@ -1,8 +1,23 @@
+let aria = document.getElementById('aria');
+// Liste les objets Aria
+let ariaObjects =[];
+
+
 // crée les variables par defaut à envoyer
-let path='dossier 1/';
+let path='dossier 1/dossier 1-1/';
 let sort='name';
 // lance la fonction loadElements lorsque la fenêtre a fini de charger
 window.onload = loadElements();
+
+
+function newPath(index){
+    path=''
+    for(let i= 1 ; i<=index ; i++){
+        path += ariaObjects[i]+"/"
+    }
+    loadElements();
+}
+
 
 // Fonction: Recupère les informations du dossier courant (et chargera les delements htmL par la suite)
 function loadElements(){
@@ -21,9 +36,38 @@ function loadElements(){
     fetch( 'check-directory.php', { method : "post" , body : formData } )
         .then( res => res.json() ).then( data =>{
             //(temporaire) affiche la reponse reçue dans la console
-            console.log(data.elements);
-            console.log(data.path);
+            aria.innerHTML="";
+
+            ariaObjects.length=0;
+
+            for (let i = 0; i < data.path.length; i++) {
+
+                ariaObjects.push(data.path[i]);
+
+                let pathItem = document.createElement("li");
+                pathItem.innerText=data.path[i];
+                pathItem.classList.add("breadcrumb-item");
+
+                if(i==(data.path.length-1)){
+                    pathItem.classList.add("active");
+                }else{
+                    let ariaFunc = 'newPath('+i+')';
+                    pathItem.setAttribute('onclick', ariaFunc);
+                }
+
+                if(i==(0) && data.path[i]=='home'){
+                    pathItem.classList.add("isHome");
+                }
+
+                aria.appendChild(pathItem);
+            }
+
+            console.log(ariaObjects);
 
             //ICI Modification du code html en fonction de la réponse
         });
 }
+
+document.getElementById("btn-back").addEventListener("click", function(){
+    newPath(ariaObjects.length-2);
+} );

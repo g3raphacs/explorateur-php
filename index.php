@@ -19,29 +19,26 @@
                 <!-- logo et liste de tri ici  -->
                 <header>
                     <h1>File explorer</h1>
-                    <p><a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a></p>
+                    <p id="btn-back"><a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a></p>
                 </header>
 
             <div id="navigation">
                 <!-- fil d'ariane ici  -->
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a><span class="fas fa-home"></span></a></li>
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Work</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">New folder</li>
+                    <ol id="aria" class="breadcrumb">
+                        <!-- elements aria crées ici  -->
                     </ol>
                 </nav>
                 <div class="btn-group">
                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        trier par
+                        Sort by
                         <span class="fas fa-sort"></span>
                     </button>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="#">name</a>
                         <a class="dropdown-item" href="#">size</a>
                         <a class="dropdown-item" href="#">type</a>
-                        <a class="dropdown-item" href="#">creation date</a>
+                        <a class="dropdown-item" href="#">modification date</a>
                     </div>
                 </div>
 
