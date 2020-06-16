@@ -69,8 +69,8 @@
         height: 40px;
         border:2px solid;
         margin-top: 1rem;
-        padding-left:10px;
         font-family: var(--font-principal);
+        padding-left: 10px;
     }
     p{
         text-align: center;
@@ -99,4 +99,5 @@ h1{
 #files{
     background-color: var(--color-three);
     height: 15rem;
+    .fileblock{background-color: var(--color-principal);}
 }
