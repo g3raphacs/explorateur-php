@@ -1,1 +1,83 @@
-#files{display:flex;flex-wrap:wrap;justify-content:center;background-color:#131313;padding:5px}#files .fileblock{display:block;background-color:#33323d;color:#fff;text-align:center;padding:5px;margin:5px;width:100px;height:100px}#files .fileblock a{color:#fff}#files .fileblock .icon{font-size:3rem}#files .fileblock p{width:100%;font-size:.9rem;margin:0;overflow:hidden;word-wrap:break-word;line-height:.8rem}#actionsBar{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:.65rem}#actionsBar .flex{display:flex}#actionsBar .column{flex-direction:column}#actionsBar .between{justify-content:space-around;width:20rem}#actionsBar .btn{color:#33323d;border-radius:20px;width:40px;height:40px;border:2px solid;margin-top:1rem;padding-left:10px}/*# sourceMappingURL=style.css.map */
+#files {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #131313;
+  padding: 5px;
+}
+#files .fileblock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #33323d;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+}
+#files .fileblock .icon {
+  font-size: 2.7rem;
+}
+#files .fileblock p {
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  line-height: 0.8rem;
+}
+#files .fileblock .filecheck {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 3px;
+  right: 3px;
+}
+
+#actionsBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.65rem;
+}
+#actionsBar .flex {
+  display: flex;
+}
+#actionsBar .column {
+  flex-direction: column;
+}
+#actionsBar .between {
+  justify-content: space-around;
+  width: 20rem;
+}
+#actionsBar .btn {
+  color: #33323d;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid;
+  margin-top: 1rem;
+  padding-left: 10px;
+}
+
+#navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#navigation button {
+  height: 30px;
+  border-radius: 10px;
+}
+#navigation button:hover {
+  height: 30px;
+  border-radius: 10px;
+}
+#navigation .dropdown-menu {
+  font-size: 0.85rem;
+}
+
+/*# sourceMappingURL=style.css.map */

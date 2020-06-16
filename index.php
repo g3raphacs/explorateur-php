@@ -19,8 +19,6 @@
                     <h1>Explorateur de fichiers</h1>
                     <p><a href="#"><span class="fas fa-arrow-circle-left btn"></span></a></p>
                 </header>
-                
-                
 
             <div id="navigation">
                 <!-- fil d'ariane ici  -->
@@ -53,27 +51,27 @@
             <div class="fileblock">
                 <div><span class="icon fas fa-folder"></span></div>
                 <p>nom de dossier</p>
-                <span class="check far fa-check-square"></span>
+                <span class="filecheck far fa-check-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-folder"></span></div>
                 <p>nom_de_dossier</p>
-                <span class="check far fa-check-square"></span>
+                <span class="filecheck far fa-check-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-file-alt"></span></div>
                 <p>nom_de_fichier.txt</p>
-                <span class="check far fa-check-square"></span>
+                <span class="filecheck far fa-check-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-file-alt"></span></div>
                 <p>nom_de_fichier.txt</p>
-                <span class="check far fa-square"></span>
+                <span class="filecheck far fa-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-file-alt"></span></div>
                 <p>nom_de_fichier.txt</p>
-                <span class="check far fa-square"></span>
+                <span class="filecheck far fa-square"></span>
             </div>
 
 

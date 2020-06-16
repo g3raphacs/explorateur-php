@@ -1,5 +1,4 @@
 <?php
-    echo $_POST('path');
     //Definit l'origine du site
     $www='.';
 
