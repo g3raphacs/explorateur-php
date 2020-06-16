@@ -1,1 +1,160 @@
-#files{display:flex;flex-wrap:wrap;justify-content:center;background-color:#131313;padding:5px}#files .fileblock{display:block;background-color:#33323d;color:#fff;text-align:center;padding:5px;margin:5px;width:100px;height:100px}#files .fileblock a{color:#fff}#files .fileblock .icon{font-size:3rem}#files .fileblock p{width:100%;font-size:.9rem;margin:0;overflow:hidden;word-wrap:break-word;line-height:.8rem}#actionsBar{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:.65rem}#actionsBar .flex{display:flex}#actionsBar .column{flex-direction:column}#actionsBar .between{justify-content:space-around;width:20rem}#actionsBar .btn{color:#33323d;border-radius:20px;width:40px;height:40px;border:2px solid;margin-top:1rem;padding-left:10px}/*# sourceMappingURL=style.css.map */
+#files {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #131313;
+  padding: 5px;
+}
+#files .fileblock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #33323d;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+}
+#files .fileblock .icon {
+  font-size: 2.7rem;
+}
+#files .fileblock p {
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  line-height: 0.8rem;
+}
+#files .fileblock .check {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 3px;
+  right: 3px;
+}
+
+:root {
+  --font-principal: "Baloo Chettan 2";
+  --color-principal: #30323D;
+  --color-secondary: #4D5061;
+  --color-three: #5C80BC;
+  --color-text: #fff;
+  --font-size-icone: 0.80rem;
+  --font-size-title: 3rem;
+}
+
+.button-back {
+  color: var(--color-text);
+  font-size: 2.5rem;
+}
+
+#navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#navigation button {
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  color: var(--color-principal);
+  margin-bottom: 20px;
+}
+#navigation .dropdown-menu {
+  font-size: 0.85rem;
+}
+#navigation .dropdown-menu .dropdown-item {
+  color: var(--color-principal);
+}
+#navigation .dropdown-menu a:hover {
+  color: var(--color-three);
+}
+#navigation .dropdown-menu a:active {
+  border: none;
+}
+#navigation .breadcrumb {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+#navigation .breadcrumb-item.active {
+  color: var(--color-three);
+  font-weight: 500;
+}
+#navigation a {
+  color: var(--color-text);
+}
+#navigation a:hover, #navigation span:hover {
+  color: var(--color-three);
+  text-decoration: none;
+}
+
+#actionsBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: var(--font-size-icone);
+  background-color: var(--color-principal);
+  height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#actionsBar .flex {
+  display: flex;
+}
+#actionsBar .column {
+  flex-direction: column;
+}
+#actionsBar .between {
+  justify-content: space-around;
+  width: 16rem;
+}
+#actionsBar .btn {
+  color: var(--color-secondary);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid;
+  margin-top: 1rem;
+  font-family: var(--font-principal);
+  padding-left: 10px;
+}
+#actionsBar p {
+  text-align: center;
+  color: var(--color-secondary);
+}
+#actionsBar p:hover {
+  color: var(--color-text);
+}
+#actionsBar .btn-outline-secondary:hover {
+  background-color: var(--color-three);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-principal);
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-title);
+}
+
+.container {
+  background-color: var(--color-secondary);
+}
+
+#files {
+  background-color: var(--color-three);
+  height: 15rem;
+}
+#files .fileblock {
+  background-color: var(--color-principal);
+}
+
+/*# sourceMappingURL=style.css.map */
