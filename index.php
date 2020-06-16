@@ -21,8 +21,6 @@
                     <h1>File explorer</h1>
                     <p><a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a></p>
                 </header>
-                
-                
 
             <div id="navigation">
                 <!-- fil d'ariane ici  -->
@@ -55,27 +53,27 @@
             <div class="fileblock">
                 <div><span class="icon fas fa-folder"></span></div>
                 <p>nom de dossier</p>
-                <span class="check far fa-check-square"></span>
+                <span class="filecheck far fa-check-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-folder"></span></div>
                 <p>nom_de_dossier</p>
-                <span class="check far fa-check-square"></span>
+                <span class="filecheck far fa-check-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-file-alt"></span></div>
                 <p>nom_de_fichier.txt</p>
-                <span class="check far fa-check-square"></span>
+                <span class="filecheck far fa-check-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-file-alt"></span></div>
                 <p>nom_de_fichier.txt</p>
-                <span class="check far fa-square"></span>
+                <span class="filecheck far fa-square"></span>
             </div>
             <div class="fileblock">
                 <div><span class="icon fas fa-file-alt"></span></div>
                 <p>nom_de_fichier.txt</p>
-                <span class="check far fa-square"></span>
+                <span class="filecheck far fa-square"></span>
             </div>
 
 
@@ -106,6 +104,8 @@
 
 
 
+    <!-- script Ajax______________________________________________________________________ -->
+    <script src="scripts/ajax.js"></script>
     <!-- script Font Awesome______________________________________________________________________ -->
     <script src="https://kit.fontawesome.com/d5dcbc8efb.js" crossorigin="anonymous"></script>
     <!-- scripts necessaires à bootstrap  -->

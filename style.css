@@ -30,7 +30,7 @@
   word-wrap: break-word;
   line-height: 0.8rem;
 }
-#files .fileblock .check {
+#files .fileblock .filecheck {
   position: absolute;
   font-size: 1.5rem;
   top: 3px;
