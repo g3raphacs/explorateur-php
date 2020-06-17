@@ -45,6 +45,7 @@ html{height: 100%;}
         font-weight: 400;
         color: var(--color-text);
         cursor: pointer;
+        @include noselect;
     }
     li:hover, span:hover{
         color: var(--color-three);
@@ -88,6 +89,7 @@ html{height: 100%;}
         text-align: center;
         color: var(--color-secondary);
         margin-bottom: 0;
+        @include noselect;
     }
     p:hover{color:var(--color-text);}
     // Button hover
@@ -110,6 +112,7 @@ h1{
     font-size: var(--font-size-title);
     padding-top: 20px;
     padding-left: 10px;
+    @include noselect;
 }
 .container{
     background-color: var(--color-principal);
