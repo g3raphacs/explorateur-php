@@ -8,7 +8,8 @@ let fileObjects =[];
 
 
 // crée les variables par defaut à envoyer
-let path='dossier 1/dossier 1-1/';
+let home = "home";
+let path='';
 let sort='name';
 // lance la fonction loadElements lorsque la fenêtre a fini de charger
 window.onload = loadElements();
@@ -21,7 +22,21 @@ function newPath(index){
     }
     loadElements();
 }
+function addpath(object,index){
+    path+=object.innerText+"/";
+    loadElements();
+}
+function download(object,index){
+    console.log('download request');
+    var link=document.createElement('a');
+         link.href=home+"/"+path+object.innerText;
+         link.download=object.innerText;
+         document.body.appendChild(link);
 
+        link.click();
+
+        document.body.removeChild(link);
+}
 
 // Fonction: Recupère les informations du dossier courant (et chargera les delements htmL par la suite)
 function loadElements(){
@@ -80,6 +95,15 @@ function loadElements(){
                 elementItem.innerHTML="<p>"+elementName+"</p>";
                 elementItem.classList.add("type-"+fileObjects[i].type);
                 elementItem.classList.add("fileblock");
+
+                if(fileObjects[i].type ==''){
+                    let elementdblclick = 'addpath(this,'+i+')'
+                    elementItem.setAttribute('ondblclick', elementdblclick);
+                }
+                else{
+                    let elementdblclick = 'download(this,'+i+')'
+                    elementItem.setAttribute('ondblclick', elementdblclick);
+                }
 
                 filesWindow.appendChild(elementItem);
             }
