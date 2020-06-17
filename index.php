@@ -35,10 +35,10 @@
                         <span class="fas fa-sort"></span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">name</a>
-                        <a class="dropdown-item" href="#">size</a>
-                        <a class="dropdown-item" href="#">type</a>
-                        <a class="dropdown-item" href="#">modification date</a>
+                        <a class="sortItem dropdown-item" href="#">name</a>
+                        <a class="sortItem dropdown-item" href="#">size</a>
+                        <a class="sortItem dropdown-item" href="#">type</a>
+                        <a class="sortItem dropdown-item" href="#">date</a>
                     </div>
                 </div>
 

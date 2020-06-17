@@ -19,7 +19,7 @@
         mkdir('home');
     }
     // initialise la variable de tri
-    $sort='name';
+    $sort='type';
 // ______________________________________________________________________________________________________________
 
 
@@ -30,7 +30,7 @@
         $newPath= str_replace('"', '',$_POST['path']);
         $url=$origin.$newPath;
         // recupère la nouvelle variable de tri
-        $sort= $_POST['sort'];
+        $sort= str_replace('"', '',$_POST['sort']);
     }else{
         $url=$origin;
     }
@@ -51,6 +51,19 @@
             $element[] = array('name' => $content[$i], 'type' => $info->getExtension(), 'date' => $info->getCTime(), 'size' => $info->getSize());
         }
     }
+    //Trier le tableau en fonction de la variable $sort
+    if($sort=="size"){
+        $columns = array_column($element, 'size');
+    }elseif($sort=="name"){
+        $columns = array_column($element, 'name');
+    }elseif($sort=="date"){
+        $columns = array_column($element, 'date');
+    }else{
+        $columns = array_column($element, 'type');
+    }
+    array_multisort($columns, SORT_ASC, $element);
+
+
     //crée un tableau contenant les elements separés de l'URL
     $tempPath = explode('/', $url);
     $path=[];

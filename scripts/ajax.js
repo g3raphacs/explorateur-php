@@ -6,11 +6,25 @@ let filesWindow = document.getElementById('files');
 // Liste les objets Fichiers
 let fileObjects =[];
 
+// Liste les objets de la liste de tri
+let dropdownItem = document.getElementsByClassName("sortItem");
+
+function fileSort(param){
+    console.log('sort by : '+param.innerText);
+    sort=param.innerText;
+    loadElements();
+}
+
+for(let i=0 ; i<dropdownItem.length ; i++){
+    let sortFunc = 'fileSort(this)';
+    dropdownItem[i].setAttribute('onclick', sortFunc);
+}
+
 
 // crée les variables par defaut à envoyer
 let home = "home";
 let path='';
-let sort='name';
+let sort='type';
 // lance la fonction loadElements lorsque la fenêtre a fini de charger
 window.onload = loadElements();
 
@@ -22,11 +36,11 @@ function newPath(index){
     }
     loadElements();
 }
-function addpath(object,index){
+function addpath(object){
     path+=object.innerText+"/";
     loadElements();
 }
-function download(object,index){
+function download(object){
     console.log('download request');
     var link=document.createElement('a');
          link.href=home+"/"+path+object.innerText;
