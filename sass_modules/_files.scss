@@ -13,7 +13,7 @@
 #files{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
     background-color: rgb(19, 19, 19);
     padding: 5px;
     .fileblock{
@@ -50,6 +50,9 @@
             right:3px;
 
         }
+    }
+    .fileblock:hover {
+        background-color: rgb(13, 30, 46);;
     }
     .fileblock:before {
         @include file;

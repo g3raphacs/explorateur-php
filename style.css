@@ -2,7 +2,6 @@
 #files {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   background-color: #131313;
   padding: 5px;
 }
@@ -45,6 +44,9 @@
   font-size: 1.5rem;
   top: 3px;
   right: 3px;
+}
+#files .fileblock:hover {
+  background-color: #0d1e2e;
 }
 #files .fileblock:before {
   content: "";
