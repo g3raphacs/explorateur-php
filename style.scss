@@ -4,8 +4,8 @@
 :root{
     --font-principal:   'Baloo Chettan 2';
     --color-principal:  #30323D; 
-    --color-secondary:  #4D5061;
-    --color-three:      #5C80BC;
+    --color-secondary:  #696d83;
+    --color-three:      #5690d1;
     --color-text:       #fff;
     --font-size-icone:  0.80rem;
     --font-size-title:  3rem;
@@ -20,6 +20,7 @@
 // Navigation - fil d'ariane
 #navigation{
     display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;
+    padding:0 10px;
     // Button tri
     button{height:30px;border-radius: 10px; border:none;color:var(--color-principal);margin-bottom:20px;}
 
@@ -29,8 +30,10 @@
         a:active{border: none;}
     }
     .breadcrumb{
-        background-color: var(--color-secondary);
+        background-color: var(--color-principal);
         color: var(--color-text);
+        margin-bottom: 0;
+        padding-left: 0;
     }
     .breadcrumb-item.active{
         color: var(--color-three);
@@ -68,13 +71,13 @@
 
     .flex{display:flex;}
     .column{flex-direction: column;}
-    
+
     .between{justify-content:space-around;width: 16rem;}
     // Button
     .btn{
         color: var(--color-secondary);
         border-radius: 20px;
-        width:40px; 
+        width:40px;
         height: 40px;
         border:2px solid;
         margin-top: 1rem;
@@ -98,16 +101,19 @@
 body{font-family: var(--font-principal);
      font-weight:400;
      color: var(--color-text);
+     background-color: var(--color-secondary);
 }
 h1{
     font-size: var(--font-size-title);
+    padding-top: 20px;
+    padding-left: 10px;
 }
 .container{
-    background-color: var(--color-secondary);
+    background-color: var(--color-principal);
 }
 
 #files{
     background-color: var(--color-three);
-    height: 15rem;
+    min-height: 15rem;
     .fileblock{background-color: var(--color-principal);}
 }

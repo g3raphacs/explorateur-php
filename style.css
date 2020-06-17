@@ -5,7 +5,7 @@
   background-color: #131313;
   padding: 5px;
 }
-#files .fileblock {
+#files .fileblock, #files #btn-back {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -21,10 +21,10 @@
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.342);
   cursor: pointer;
 }
-#files .fileblock .icon {
+#files .fileblock .icon, #files #btn-back .icon {
   font-size: 2.7rem;
 }
-#files .fileblock p {
+#files .fileblock p, #files #btn-back p {
   width: 100%;
   font-size: 0.9rem;
   margin: 0;
@@ -39,13 +39,13 @@
   user-select: none;
   /* Propriété standard */
 }
-#files .fileblock .filecheck {
+#files .fileblock .filecheck, #files #btn-back .filecheck {
   position: absolute;
   font-size: 1.5rem;
   top: 3px;
   right: 3px;
 }
-#files .fileblock:hover {
+#files .fileblock:hover, #files #btn-back:hover {
   background-color: #0d1e2e;
 }
 #files .fileblock:before {
@@ -112,8 +112,8 @@
 :root {
   --font-principal: "Baloo Chettan 2";
   --color-principal: #30323D;
-  --color-secondary: #4D5061;
-  --color-three: #5C80BC;
+  --color-secondary: #696d83;
+  --color-three: #5690d1;
   --color-text: #fff;
   --font-size-icone: 0.80rem;
   --font-size-title: 3rem;
@@ -129,6 +129,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 #navigation button {
   height: 30px;
@@ -150,8 +151,10 @@
   border: none;
 }
 #navigation .breadcrumb {
-  background-color: var(--color-secondary);
+  background-color: var(--color-principal);
   color: var(--color-text);
+  margin-bottom: 0;
+  padding-left: 0;
 }
 #navigation .breadcrumb-item.active {
   color: var(--color-three);
@@ -219,19 +222,22 @@ body {
   font-family: var(--font-principal);
   font-weight: 400;
   color: var(--color-text);
+  background-color: var(--color-secondary);
 }
 
 h1 {
   font-size: var(--font-size-title);
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 .container {
-  background-color: var(--color-secondary);
+  background-color: var(--color-principal);
 }
 
 #files {
   background-color: var(--color-three);
-  height: 15rem;
+  min-height: 15rem;
 }
 #files .fileblock {
   background-color: var(--color-principal);

@@ -19,7 +19,6 @@
                 <!-- logo et liste de tri ici  -->
                 <header>
                     <h1>File explorer</h1>
-                    <p id="btn-back"><a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a></p>
                 </header>
 
             <div id="navigation">
@@ -47,33 +46,6 @@
 
         <div id="files">
             <!-- afficher les fichiers ici  -->
-            <div class="fileblock">
-                <span class="icon fas fa-folder"></span>
-                <p>nom de dossier</p>
-                <span class="filecheck far fa-check-square"></span>
-            </div>
-            <div class="fileblock">
-                <div><span class="icon fas fa-folder"></span></div>
-                <p>nom_de_dossier</p>
-                <span class="filecheck far fa-check-square"></span>
-            </div>
-            <div class="fileblock">
-                <div><span class="icon fas fa-file-alt"></span></div>
-                <p>nom_de_fichier.txt</p>
-                <span class="filecheck far fa-check-square"></span>
-            </div>
-            <div class="fileblock">
-                <div><span class="icon fas fa-file-alt"></span></div>
-                <p>nom_de_fichier.txt</p>
-                <span class="filecheck far fa-square"></span>
-            </div>
-            <div class="fileblock">
-                <div><span class="icon fas fa-file-alt"></span></div>
-                <p>nom_de_fichier.txt</p>
-                <span class="filecheck far fa-square"></span>
-            </div>
-
-
         </div>
 
         <div id="actionsBar">

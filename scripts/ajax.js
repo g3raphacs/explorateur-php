@@ -6,7 +6,7 @@ let filesWindow = document.getElementById('files');
 // Liste les objets Fichiers
 let fileObjects =[];
 
-// Liste les objets de la liste de tri
+// Fonction de tri
 let dropdownItem = document.getElementsByClassName("sortItem");
 
 function fileSort(param){
@@ -101,6 +101,16 @@ function loadElements(){
             filesWindow.innerHTML="";
             //efface les objets fichiers
             fileObjects.length=0;
+            console.log(ariaObjects.length);
+            if(ariaObjects.length>1){
+                console.log("affiche bouton");
+                let elementItem = document.createElement("p");
+                elementItem.innerHTML='<a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a>';
+                elementItem.setAttribute('id', "btn-back");
+                elementItem.setAttribute('onclick', 'newPath('+(ariaObjects.length-2)+')');
+                // elementItem.classList.add("backblock");
+                filesWindow.appendChild(elementItem);
+            }
 
             for (let i = 0; i < data.elements.length; i++) {
                 fileObjects.push(data.elements[i]);
@@ -113,6 +123,7 @@ function loadElements(){
                 if(fileObjects[i].type ==''){
                     let elementdblclick = 'addpath(this,'+i+')'
                     elementItem.setAttribute('ondblclick', elementdblclick);
+                    elementItem.style.color = "rgb(255,220,100)";
                 }
                 else{
                     let elementdblclick = 'download(this,'+i+')'
@@ -121,11 +132,5 @@ function loadElements(){
 
                 filesWindow.appendChild(elementItem);
             }
-
-            //ICI Modification du code html en fonction de la réponse
         });
 }
-
-document.getElementById("btn-back").addEventListener("click", function(){
-    newPath(ariaObjects.length-2);
-} );
