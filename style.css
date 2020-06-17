@@ -2,8 +2,10 @@
 #files {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   background-color: #131313;
   padding: 5px;
+  overflow-y: scroll;
 }
 #files .fileblock, #files #btn-back {
   position: relative;
@@ -14,7 +16,7 @@
   color: white;
   text-align: center;
   padding: 5px;
-  margin: 5px;
+  margin: 4px;
   width: 100px;
   height: 100px;
   border-radius: 3px;
@@ -113,14 +115,18 @@
   --font-principal: "Baloo Chettan 2";
   --color-principal: #30323D;
   --color-secondary: #696d83;
-  --color-three: #5690d1;
+  --color-three: #66abe4;
   --color-text: #fff;
   --font-size-icone: 0.80rem;
   --font-size-title: 3rem;
 }
 
+html {
+  height: 100%;
+}
+
 .button-back {
-  color: var(--color-text);
+  color: var(--color-three);
   font-size: 2.5rem;
 }
 
@@ -209,6 +215,7 @@
 #actionsBar p {
   text-align: center;
   color: var(--color-secondary);
+  margin-bottom: 0;
 }
 #actionsBar p:hover {
   color: var(--color-text);
@@ -223,6 +230,8 @@ body {
   font-weight: 400;
   color: var(--color-text);
   background-color: var(--color-secondary);
+  height: 100%;
+  margin: 0;
 }
 
 h1 {
@@ -233,11 +242,13 @@ h1 {
 
 .container {
   background-color: var(--color-principal);
+  height: 100%;
 }
 
 #files {
   background-color: var(--color-three);
-  min-height: 15rem;
+  min-height: 110px;
+  max-height: 440px;
 }
 #files .fileblock {
   background-color: var(--color-principal);

@@ -5,15 +5,15 @@
     --font-principal:   'Baloo Chettan 2';
     --color-principal:  #30323D; 
     --color-secondary:  #696d83;
-    --color-three:      #5690d1;
+    --color-three:      #66abe4;
     --color-text:       #fff;
     --font-size-icone:  0.80rem;
     --font-size-title:  3rem;
 }
-
+html{height: 100%;}
 // Button back
 .button-back{
-    color: var(--color-text);
+    color: var(--color-three);
     font-size: 2.5rem;
 }
 
@@ -87,6 +87,7 @@
     p{
         text-align: center;
         color: var(--color-secondary);
+        margin-bottom: 0;
     }
     p:hover{color:var(--color-text);}
     // Button hover
@@ -102,6 +103,8 @@ body{font-family: var(--font-principal);
      font-weight:400;
      color: var(--color-text);
      background-color: var(--color-secondary);
+     height: 100%;
+     margin: 0;
 }
 h1{
     font-size: var(--font-size-title);
@@ -110,10 +113,12 @@ h1{
 }
 .container{
     background-color: var(--color-principal);
+    height: 100%;
 }
 
 #files{
     background-color: var(--color-three);
-    min-height: 15rem;
+    min-height: 110px;
+    max-height:440px;
     .fileblock{background-color: var(--color-principal);}
 }
