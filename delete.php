@@ -29,11 +29,13 @@
         // chdir($url);
         var_dump($url);
 
-        if( file_exists ($url)){
-            var_dump($url.'file exists');
-            unlink( $url );
-        }else{
-            var_dump($url.'file do not exists');
-        }
+        // if( file_exists ($url)){
+        //     var_dump($url.'file exists');
+        //     unlink( $url );
+        // }else{
+        //     var_dump($url.'file do not exists');
+        // }
+
+        @unlink( $fichier ) ;
     }
 // ______________________________________________________________________________________________________________

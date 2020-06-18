@@ -201,7 +201,7 @@ btnDelete.addEventListener("click", function(){
 });
 
 
-// on récupère le button copy dans index.php 
+// on récupère le button copy dans index.php
 // on lui met un écouteur d'évènement au clic
 // et comme instruction la fonction copyElements dans ajax.js
 let btnCopy = document.getElementById('btn-copy');
@@ -210,12 +210,12 @@ btnCopy.addEventListener("click", function(){
 });
 
 
-let btnCopy = document.getElementById('btn-paste');
-btnPaste.addEventListener("click", function(){
+let btnPaste = document.getElementById('btn-paste');
+btnCopy.addEventListener("click", function(){
     pasteElements();
 });
 
 let btnCut = document.getElementById('btn-cut');
-btnPaste.addEventListener("click", function(){
-    pasteElements();
+btnCut.addEventListener("click", function(){
+    cutElements();
 });
