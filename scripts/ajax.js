@@ -83,6 +83,31 @@ function deleteElements(){
     }
 }
 
+// function copy elements
+function copyElements(){
+    for (let i = 0 ; i<fileObjects.length ; i++){
+        if(fileObjects[i].selected){
+            let copyfile = fileObjects[i].name;
+            console.log('copie le fichier '+path+fileObjects[i].name);
+
+            var formData = new FormData();
+            formData.append('path', JSON.stringify(path));
+            formData.append('file', JSON.stringify(copyfile));
+
+
+            fetch( 'copy.php', { method : "post" , body : formData } )
+            .then( res => res.json() ).then( data =>{
+
+            });
+        }
+    }
+}
+
+
+
+
+
+
 // Fonction: Recupère les informations du dossier courant (et chargera les delements htmL par la suite)
 function loadElements(){
     // crée un objet contenant les variables à envoyer
@@ -175,3 +200,12 @@ btnDelete.addEventListener("click", function(){
     deleteElements();
 });
 
+
+// on récupère le button copy dans index.php 
+// on lui met un écouteur d'évènement au clic
+// et comme instruction la fonction copyElements dans ajax.js
+let btnCopy = document.getElementById('btn-copy');
+
+btnCopy.addEventListener("click", function(){
+    copyElements();
+});
