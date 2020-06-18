@@ -205,7 +205,17 @@ btnDelete.addEventListener("click", function(){
 // on lui met un écouteur d'évènement au clic
 // et comme instruction la fonction copyElements dans ajax.js
 let btnCopy = document.getElementById('btn-copy');
-
 btnCopy.addEventListener("click", function(){
     copyElements();
+});
+
+
+let btnCopy = document.getElementById('btn-paste');
+btnPaste.addEventListener("click", function(){
+    pasteElements();
+});
+
+let btnCut = document.getElementById('btn-cut');
+btnPaste.addEventListener("click", function(){
+    pasteElements();
 });
