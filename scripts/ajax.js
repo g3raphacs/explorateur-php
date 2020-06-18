@@ -10,7 +10,6 @@ let fileObjects =[];
 let dropdownItem = document.getElementsByClassName("sortItem");
 
 function fileSort(param){
-    console.log('sort by : '+param.innerText);
     sort=param.innerText;
     loadElements();
 }
@@ -41,7 +40,6 @@ function addpath(object){
     loadElements();
 }
 function download(object){
-    console.log('download request');
     var link=document.createElement('a');
          link.href=home+"/"+path+object.innerText;
          link.download=object.innerText;
@@ -101,9 +99,7 @@ function loadElements(){
             filesWindow.innerHTML="";
             //efface les objets fichiers
             fileObjects.length=0;
-            console.log(ariaObjects.length);
             if(ariaObjects.length>1){
-                console.log("affiche bouton");
                 let elementItem = document.createElement("p");
                 elementItem.innerHTML='<a href="#"><span class="fas fa-arrow-circle-left button-back"></span></a>';
                 elementItem.setAttribute('id', "btn-back");
@@ -115,10 +111,16 @@ function loadElements(){
             for (let i = 0; i < data.elements.length; i++) {
                 fileObjects.push(data.elements[i]);
                 let elementName=fileObjects[i].name;
+                fileObjects[i].selected = false;
                 let elementItem = document.createElement("div");
                 elementItem.innerHTML="<p>"+elementName+"</p>";
                 elementItem.classList.add("type-"+fileObjects[i].type);
                 elementItem.classList.add("fileblock");
+                elementItem.classList.add("file");
+                elementItem.classList.add("unselected");
+
+                let elementclick = 'select(this,'+i+')'
+                    elementItem.setAttribute('ondclick', elementclick);
 
                 if(fileObjects[i].type ==''){
                     let elementdblclick = 'addpath(this,'+i+')'
@@ -129,8 +131,10 @@ function loadElements(){
                     let elementdblclick = 'download(this,'+i+')'
                     elementItem.setAttribute('ondblclick', elementdblclick);
                 }
-
                 filesWindow.appendChild(elementItem);
             }
         });
+        //ajout des objets html à fileObjects
+        let filesObj = document.getElementsByClassName('file');
 }
+

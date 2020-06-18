@@ -111,6 +111,24 @@
   font-size: 2.3rem;
 }
 
+.unselected:after {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 0.8rem;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.selected:after {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 0.8rem;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 :root {
   --font-principal: "Baloo Chettan 2";
   --color-principal: #30323D;

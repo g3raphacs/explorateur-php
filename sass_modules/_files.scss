@@ -92,3 +92,20 @@
         @include file("\f1c4");
     }
 }
+
+.unselected:after{
+    content: "\f0c8";
+        font-family: "FontAwesome";
+        font-size: 0.8rem;
+        position: absolute;
+        top:5px;
+        right:5px;
+}
+.selected:after{
+    content: "\f0c8";
+        font-family: "FontAwesome";
+        font-size: 0.8rem;
+        position: absolute;
+        top:5px;
+        right:5px;
+}
