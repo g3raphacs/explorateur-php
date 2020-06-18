@@ -75,7 +75,7 @@ function deleteElements(){
             formData.append('file', JSON.stringify(deletefile));
 
 
-            fetch( 'scripts/delete.php', { method : "post" , body : formData } )
+            fetch( 'delete.php', { method : "post" , body : formData } )
             .then( res => res.json() ).then( data =>{
 
             });
