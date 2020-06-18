@@ -50,6 +50,20 @@ function download(object){
         document.body.removeChild(link);
 }
 
+function select(obj,index){
+    let filesObj = document.getElementsByClassName('file');
+    if(fileObjects[index].selected == false){
+        fileObjects[index].selected = true;
+        filesObj[index].classList.add("selected");
+        filesObj[index].classList.remove("unselected");
+    }
+    else{
+        fileObjects[index].selected = false;
+        filesObj[index].classList.remove("selected");
+        filesObj[index].classList.add("unselected");
+    }
+}
+
 // Fonction: Recupère les informations du dossier courant (et chargera les delements htmL par la suite)
 function loadElements(){
     // crée un objet contenant les variables à envoyer
@@ -120,7 +134,7 @@ function loadElements(){
                 elementItem.classList.add("unselected");
 
                 let elementclick = 'select(this,'+i+')'
-                    elementItem.setAttribute('ondclick', elementclick);
+                    elementItem.setAttribute('onclick', elementclick);
 
                 if(fileObjects[i].type ==''){
                     let elementdblclick = 'addpath(this,'+i+')'
@@ -134,7 +148,5 @@ function loadElements(){
                 filesWindow.appendChild(elementItem);
             }
         });
-        //ajout des objets html à fileObjects
-        let filesObj = document.getElementsByClassName('file');
 }
 

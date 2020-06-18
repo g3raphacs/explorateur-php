@@ -121,7 +121,7 @@
 }
 
 .selected:after {
-  content: "";
+  content: "";
   font-family: "FontAwesome";
   font-size: 0.8rem;
   position: absolute;
