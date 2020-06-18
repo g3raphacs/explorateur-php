@@ -55,7 +55,7 @@
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-cut"></span></button><p>Cut</p></div>
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-copy"></span></button><p>Copy</p></div>
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-paste"></span></span></button><p>Paste</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Delete</p></div>
+                <div id="btn-delete" class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Delete</p></div>
             </div>
             <div class="flex between">
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye"></span></button><p>Eyes</p></div>

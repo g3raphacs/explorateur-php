@@ -64,6 +64,25 @@ function select(obj,index){
     }
 }
 
+function deleteElements(){
+    for (let i = 0 ; i<fileObjects.length ; i++){
+        if(fileObjects[i].selected){
+            let deletefile = fileObjects[i].name;
+            console.log('supprime le fichier '+path+fileObjects[i].name);
+
+            var formData = new FormData();
+            formData.append('path', JSON.stringify(path));
+            formData.append('file', JSON.stringify(deletefile));
+
+
+            fetch( 'scripts/delete.php', { method : "post" , body : formData } )
+            .then( res => res.json() ).then( data =>{
+
+            });
+        }
+    }
+}
+
 // Fonction: Recupère les informations du dossier courant (et chargera les delements htmL par la suite)
 function loadElements(){
     // crée un objet contenant les variables à envoyer
@@ -149,4 +168,10 @@ function loadElements(){
             }
         });
 }
+
+let btnDelete = document.getElementById('btn-delete');
+
+btnDelete.addEventListener("click", function(){
+    deleteElements();
+});
 
