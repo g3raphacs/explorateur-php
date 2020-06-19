@@ -18,24 +18,27 @@
 
 // ______________________________________________________________________________________________________________
 
-
 // REQUETE_______________________________________________________________________________________________________
-    // Recupère la requète:
+
     if(isset($_POST)){
         $path=str_replace('"', '',$_POST['path']);
         $file= str_replace('"', '',$_POST['file']);
         $url=$origin.$path.$file;
 
-        // chdir($url);
-        var_dump($url);
-
-        // if( file_exists ($url)){
-        //     var_dump($url.'file exists');
-        //     unlink( $url );
-        // }else{
-        //     var_dump($url.'file do not exists');
-        // }
-
-        @unlink( $fichier ) ;
+        if( file_exists ($url)){
+            copy($url, './trash/'.$file);
+            unlink( $url );
+            $status=true;
+            $message = 'deleted';
+        }else{
+            $status=false;
+            $message = 'file do not exists';
+        }
     }
 // ______________________________________________________________________________________________________________
+echo json_encode(
+    array(
+        'status' => $status,
+        'message' => $message,
+    )
+);

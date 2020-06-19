@@ -17,19 +17,39 @@
     $path='';
 
 // ______________________________________________________________________________________________________________
+// SUPPRIMER LES FICHIERS DE COPY
+
+//Scan les fichiers et les ajoute au tableau content
+$content=scandir('./copy/');
+
+//Parcours le tableau content et rempli le tableau element avec les informations des fichiers
+for ($i=0 ; $i<count($content); $i++){
+    if (($content[$i]!=='.') && ($content[$i]!=='..')){
+        unlink( './copy/'.$content[$i] );
+    }
+}
 
 
 // REQUETE_______________________________________________________________________________________________________
-    // Recupère la requète:
+
     if(isset($_POST)){
         $path=str_replace('"', '',$_POST['path']);
         $file= str_replace('"', '',$_POST['file']);
         $url=$origin.$path.$file;
 
-        if (!copy($file, $newfile)) {
-            echo "La copie $file du fichier a échoué...\n";
+        if( file_exists ($url)){
+            copy($url, './copy/'.$file);
+            $status=true;
+            $message = 'copied';
+        }else{
+            $status=false;
+            $message = 'file do not exists';
         }
-
-        
     }
 // ______________________________________________________________________________________________________________
+echo json_encode(
+    array(
+        'status' => $status,
+        'message' => $message,
+    )
+);

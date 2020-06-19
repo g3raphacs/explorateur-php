@@ -1,6 +1,5 @@
-Tutoriel : Explorateur de fichiers en PHP
-
 1 - Afficher le contenu du répertoire 
+
 $url = getcwd(); 
   $content=scandir($url);
 
@@ -11,7 +10,8 @@ $url = getcwd();
     }
 
 2 - Le script ouvre un "enfant" du répertoire dans lequel il se trouve
- //initialisation
+
+//initialisation
     $home="home";
     if( !is_dir($home)){
         mkdir('home');
@@ -28,6 +28,7 @@ $url = getcwd();
     }
 
 3 - Faire en sorte que .. et . n’apparaissent pas
+
 $display_files = [];
     foreach(
         $content as $item 
@@ -36,23 +37,119 @@ $display_files = [];
             echo $item."<br />";
         }
     }
+
+
 3.2 - Styliser l'explorateur de fichier
 
-4 - Afficher un fil d'ariane (breadcrumb) pour se repérer dans l'arborescence 
-5 - Pouvoir se promener dans l'arborescence : ouvrir des dossiers enfants, remonter au parent, etc.)
-6 - Trier les fichiers par nom / taille / type / date de création
-8 - Bouton pour classer les fichiers par nom / taille / type / date de création
+4 - Afficher un fil d'ariane (breadcrumb) pour se repérer dans l'arborescence répertoire 
+
+
+
+5 - Pouvoir se promener dans l'arborescence : ouvrir des dossiers enfants, remonter au parent, etc.) (impossible de remonter plus haut que le dossier initial)
+
+
+
+6 - Afficher les fichiers par nom / taille / type / date de création
+is_dir();
+filesize();
+filetime();
+
+
+8 - Bouton pour classer les fichiers par nom / taille / type / date de modification
+
+
+
 9 - Option afficher/masquer les fichiers cachés
+En PHP : 
+    
+            <tr ";
+            if ($item[0] == "."){ 
+              echo "class='hidden'>";
+            } else {
+              echo ">";
+            }
+En Javascript  :
+let hideSeek = 'cache';
+let cacheMoi = $('.hidden');
+cacheMoi.hide()
+$("#cache").click(function(){
+    if (hideSeek == 'cache') {
+        cacheMoi.show();
+        hideSeek = 'show'
+        $(this).html("Hide");
+    } else {
+        cacheMoi.hide();
+        hideSeek ='cache'
+        $(this).html("Show");
+    }
+});
+
 10 - Ouvrir des fichiers
-11 - Modifier des fichiers
+file();
+
+11 - Modifier des fichiers .txt
+
+
 12 - Couper/copier/collera les fichiers
-13 - Supprimer des fichiers
+
+
+13 - Supprimer des fichiers et dossiers
+
+$path_file = (isset($_POST['path']) ? $_POST['path']:"");
+$delete = (isset($_POST['deleteReally']) ? $_POST['deleteReally']:"");
+
+if (isset($_POST['delete'])) {
+  $deleteMove = $_POST['delete'];
+  rename($deleteMove,getcwd().DIRECTORY_SEPARATOR.'.recycle_bin'.DIRECTORY_SEPARATOR.$deleteMove);
+}
+
+if ($delete !== "") {
+  $file = $path_file.DIRECTORY_SEPARATOR.$delete;
+  if (!is_dir($file)) {
+    unlink($file);
+  } else {
+    rrmdir($file);
+  }
+}
+13.1 - Supprimer des dossiers
+rmdir()
+
+13.2 - Supprimer des fichiers 
+unlink()
+
+13.3 Supprimer des dossiers non vides
+function rrmdir($dir) { 
+    if (is_dir($dir)) { 
+      $objects = scandir($dir);
+      foreach ($objects as $object) { 
+        if ($object != "." && $object != "..") { 
+          if (is_dir($dir. DIRECTORY_SEPARATOR .$object) && !is_link($dir."/".$object))
+            rrmdir($dir. DIRECTORY_SEPARATOR .$object);
+          else
+            unlink($dir. DIRECTORY_SEPARATOR .$object); 
+        } 
+      }
+      rmdir($dir); 
+    } 
+  }
+
 14 - Créer un nouveau dossier dans le répertoire où l'on est positionné
+
+
 15 - Créer un nouveau fichier dans le répertoire où l'on est positionné
+
 16 - Les fichiers supprimés vont dans une corbeille
+
+
 17 - Restaurer les fichiers depuis la corbeille
-18 - Styliser l'explorateur de fichier
-19 - Upload de fichier + un système de drag n’drop
+
+
+18 - Upload de fichier + un système de drag n’drop
+
+
+
+19 - Renomer un fichier
+rename()
 
 cwd = current working directory (ça aide toujours un peu quand on sait ce que ça veut dire)
 

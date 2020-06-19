@@ -129,6 +129,14 @@
   right: 5px;
 }
 
+.selected {
+  border: 2px solid red;
+}
+
+.hidden {
+  opacity: 0.5;
+}
+
 :root {
   --font-principal: "Baloo Chettan 2";
   --color-principal: #30323D;

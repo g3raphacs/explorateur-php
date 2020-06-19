@@ -6,6 +6,7 @@ let filesWindow = document.getElementById('files');
 // Liste les objets Fichiers
 let fileObjects =[];
 
+let hiddenFiles = true;
 // Fonction de tri
 let dropdownItem = document.getElementsByClassName("sortItem");
 
@@ -68,7 +69,6 @@ function deleteElements(){
     for (let i = 0 ; i<fileObjects.length ; i++){
         if(fileObjects[i].selected){
             let deletefile = fileObjects[i].name;
-            console.log('supprime le fichier '+path+fileObjects[i].name);
 
             var formData = new FormData();
             formData.append('path', JSON.stringify(path));
@@ -77,18 +77,19 @@ function deleteElements(){
 
             fetch( 'delete.php', { method : "post" , body : formData } )
             .then( res => res.json() ).then( data =>{
-
+                if(data.status){
+                    loadElements();
+                }
+                console.log(data.message);
             });
         }
     }
 }
 
-// function copy elements
 function copyElements(){
     for (let i = 0 ; i<fileObjects.length ; i++){
         if(fileObjects[i].selected){
             let copyfile = fileObjects[i].name;
-            console.log('copie le fichier '+path+fileObjects[i].name);
 
             var formData = new FormData();
             formData.append('path', JSON.stringify(path));
@@ -97,18 +98,46 @@ function copyElements(){
 
             fetch( 'copy.php', { method : "post" , body : formData } )
             .then( res => res.json() ).then( data =>{
+                console.log(data.message);
+            });
+        }
+    }
+}
+function pasteElements(){
+    console.log('fonction')
+    var formData = new FormData();
+        formData.append('path', JSON.stringify(path));
 
+
+        fetch( 'paste.php', { method : "post" , body : formData } )
+            .then( res => res.json() ).then( data =>{
+             console.log(data.message);
+             loadElements();
+         });
+}
+
+function cutElements(){
+    for (let i = 0 ; i<fileObjects.length ; i++){
+        if(fileObjects[i].selected){
+            let cutfile = fileObjects[i].name;
+
+            var formData = new FormData();
+            formData.append('path', JSON.stringify(path));
+            formData.append('file', JSON.stringify(cutfile));
+
+
+            fetch( 'cut.php', { method : "post" , body : formData } )
+            .then( res => res.json() ).then( data =>{
+                if(data.status){
+                    loadElements();
+                }
+                console.log(data.message);
             });
         }
     }
 }
 
-
-
-
-
-
-// Fonction: Recupère les informations du dossier courant (et chargera les delements htmL par la suite)
+// Fonction: Recupère les informations du dossier courant et charge les delements htmL
 function loadElements(){
     // crée un objet contenant les variables à envoyer
     const sendData = {
@@ -189,7 +218,17 @@ function loadElements(){
                     let elementdblclick = 'download(this,'+i+')'
                     elementItem.setAttribute('ondblclick', elementdblclick);
                 }
-                filesWindow.appendChild(elementItem);
+
+                if(elementItem.innerText.charAt(0) == '.'){
+                    elementItem.classList.add("hidden");
+                    console.log('fichier caché'+elementName);
+                    if(hiddenFiles){
+                        filesWindow.appendChild(elementItem);
+                    }
+                }
+                else{
+                    filesWindow.appendChild(elementItem);
+                }
             }
         });
 }
@@ -211,11 +250,16 @@ btnCopy.addEventListener("click", function(){
 
 
 let btnPaste = document.getElementById('btn-paste');
-btnCopy.addEventListener("click", function(){
+btnPaste.addEventListener("click", function(){
     pasteElements();
 });
 
 let btnCut = document.getElementById('btn-cut');
 btnCut.addEventListener("click", function(){
     cutElements();
+});
+let btnHidden = document.getElementById('btn-hidden');
+btnHidden.addEventListener("click", function(){
+    hiddenFiles = !hiddenFiles;
+    loadElements();
 });

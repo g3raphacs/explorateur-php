@@ -58,8 +58,7 @@
                 <div id="btn-delete" class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-minus-circle"></span></button><p>Delete</p></div>
             </div>
             <div class="flex between">
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye"></span></button><p>Eyes</p></div>
-                <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye-slash"></span></button><p>Hide</p></div>
+                <div id="btn-hidden" class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-eye"></span></button><p>Eyes</p></div>
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="far fa-trash-alt"></span></button><p>Trash</p></div>
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-trash-restore"></span></button><p>Restore</p></div>
                 <div class="flex column"><button type="button" class="btn btn-outline-secondary"><span class="fas fa-upload"></span></button><p>Upload</p></div>
